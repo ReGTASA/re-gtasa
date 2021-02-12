@@ -2,5 +2,14 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="utils\patcher.cpp" />
+    <ClCompile Include="CSimpleTransform.cpp" />
+    <ClCompile Include="math\CVector.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utils\patcher.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="CSimpleTransform.h" />
+    <ClInclude Include="math\CVector.h" />
   </ItemGroup>
 </Project>
