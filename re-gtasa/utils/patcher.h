@@ -10,7 +10,47 @@
 #define EAXJMP(a) { _asm mov eax, a _asm jmp eax }
 #define VARJMP(a) { _asm jmp a }
 
+#define DECL_VAR(type, name)		type* name = (type*)addr;
+#define DECL_ARR(type, name, addr)	type** name = (type**)addr;
+#define GET_VAR(name)				*(name)
+#define GET_ARR(name)				*(name)
+
 #define VALIDATE_SIZE(struc, size) static_assert(sizeof(struc) == size, "Invalid structure size of " #struc)
+
+template<typename T, uintptr_t address>
+struct GtaVar
+{
+public:
+	T Get() {
+		return *_pointer;
+	}
+
+	void Set(T value) {
+		*_pointer = value;
+	}
+
+	size_t SizeOf() {
+		return sizeof(T);
+	}
+
+private:
+	T* _pointer = reinterpret_cast<T*>(address);
+};
+
+template<typename T, uintptr_t address, size_t size>
+struct GtaArr
+{
+public:
+	T* Get() {
+		return _pointer;
+	}
+
+	size_t SizeOf() {
+		return sizeof(T) * size;
+	}
+private:
+	T* _pointer = reinterpret_cast<T*>(address);
+};
 
 enum
 {

@@ -3,13 +3,18 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="utils\patcher.cpp" />
-    <ClCompile Include="CSimpleTransform.cpp" />
     <ClCompile Include="math\CVector.cpp" />
+    <ClCompile Include="core\CFileLoader.cpp" />
+    <ClCompile Include="core\CFileMgr.cpp" />
+    <ClCompile Include="entity\CSimpleTransform.cpp" />
+    <ClCompile Include="core\core.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils\patcher.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="CSimpleTransform.h" />
     <ClInclude Include="math\CVector.h" />
+    <ClInclude Include="core\CFileLoader.h" />
+    <ClInclude Include="core\CFileMgr.h" />
+    <ClInclude Include="entity\CSimpleTransform.h" />
   </ItemGroup>
 </Project>

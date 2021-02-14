@@ -1,6 +1,6 @@
 #pragma once
 
-#include "math/CVector.h"
+#include "../math/CVector.h"
 
 class CSimpleTransform
 {

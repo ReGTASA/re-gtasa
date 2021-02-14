@@ -2,7 +2,6 @@
 
 #include "utils/patcher.h"
 
-
 void debug(const char* format, ...)
 {
 	static const int re3_buffsize = 1024;
@@ -20,11 +19,12 @@ BOOL WINAPI DllMain(HINSTANCE hInst, DWORD reason, LPVOID)
 {
 	if (reason == DLL_PROCESS_ATTACH)
 	{
-
 		AllocConsole();
 		freopen("CONIN$", "r", stdin);
 		freopen("CONOUT$", "w", stdout);
 		freopen("CONOUT$", "w", stderr);
+
+		debug("re-gtasa loaded");
 
 		StaticPatcher::Apply();
 	}

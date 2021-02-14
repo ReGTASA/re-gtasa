@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -94,13 +94,18 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CSimpleTransform.cpp" />
+    <ClCompile Include="core\CFileLoader.cpp" />
+    <ClCompile Include="core\CFileMgr.cpp" />
+    <ClCompile Include="core\core.cpp" />
+    <ClCompile Include="entity\CSimpleTransform.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math\CVector.cpp" />
     <ClCompile Include="utils\patcher.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CSimpleTransform.h" />
+    <ClInclude Include="core\CFileLoader.h" />
+    <ClInclude Include="core\CFileMgr.h" />
+    <ClInclude Include="entity\CSimpleTransform.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="math\CVector.h" />
     <ClInclude Include="utils\patcher.h" />
